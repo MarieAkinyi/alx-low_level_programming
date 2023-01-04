@@ -1,6 +1,3 @@
-/*file:0-memset.c
- * ath:not
- */
 #include "main.h"
 
 /**
@@ -13,14 +10,14 @@
  *  Return: A pointer to the filled memory area @s.
  */
 
-void *_memset(void *s, int c, size_t n)
+char *_memset(char *s, char c,unsigned int n)
 {
-	unsigned int index;
-	unsigned char *memory = s, value = c;
+	int i = 0;
 
-	for(index = 0; index < n; index++)
-		memory[index] = value;
-
-
-	return(memory);
+	for(; n > 0; i++)
+	{
+		s[i] = b;
+		n--;
+	}
+	return(s);
 }
