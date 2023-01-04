@@ -1,23 +1,27 @@
-#ifndef MAIN_H 
-#define MAIN_H
+/*
+ * file: 0-memset.c
+ * author:marie
+ */
+#include "main.h"
 
 /**
- * file : main.h
- * author: Marie
- * description: Header file containing prototypes of all functions
- *  used in the 0x06-pointers_arrays_strings directory.
+ * _memset: fills the first n character of the memory
+ *  pointed to by @s with the constant byte @c.
+ *  @s: A pointer to the memory area to be filled.
+ *  @c: character to fill the memory area with
+ *  @n: number of bytes to be filled
+ *  description_memset: over there
+ *  return: pointer to the meory area @s
  */
+void *_memset(void *s, int c, size_t n)
+{
+	unsigned int index;
+	unsigned char *memory = s, value = c;
 
-#include <stddef.h> 
-int _putchar(char c);
-void *_memset(void *s, int c, size_t n);
-char *_memcpy(char *dest, char *src, unsigned int n);
-char *_strchr(char *s, char c);
-unsigned int _strspn(char *s, char *accept);
-char *_strpbrk(char *s, char *accept); 
-char *_strstr(char *haystack, char *needle);
-void print_chessboard(char (*a)[8]);
-void print_diagsums(int *a, int size);
-void set_string(char **s, char *to);
 
-#endif
+	for (index = 0; index < n; index++)
+	       memory[index] = value;
+
+return(memory);
+}
+
